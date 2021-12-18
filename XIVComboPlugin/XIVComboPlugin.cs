@@ -16,7 +16,7 @@ namespace XIVComboPlugin
 {
     class XIVComboPlugin : IDalamudPlugin
     {
-        public string Name => "XIV Combo Plugin";
+        public string Name => "XIV Combo Plugin K";
 
         public XIVComboConfiguration Configuration;
 
@@ -34,7 +34,7 @@ namespace XIVComboPlugin
         public XIVComboPlugin()
         {
 
-            CommandManager.AddHandler("/pcombo", new CommandInfo(OnCommandDebugCombo)
+            CommandManager.AddHandler("/pcombok", new CommandInfo(OnCommandDebugCombo)
             {
                 HelpMessage = "Open a window to edit custom combo settings.",
                 ShowInHelp = true
@@ -209,7 +209,7 @@ namespace XIVComboPlugin
         {
             this.iconReplacer.Dispose();
 
-            CommandManager.RemoveHandler("/pcombo");
+            CommandManager.RemoveHandler("/pcombok");
 
             PluginInterface.Dispose();
         }
